@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "ghostmark.openforge.in",
       },
+      {
+        protocol: "https",
+        hostname: "speaktechenglish.com",
+      },
     ],
     localPatterns: [
       {

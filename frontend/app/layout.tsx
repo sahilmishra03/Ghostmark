@@ -68,7 +68,8 @@ export default function RootLayout({
     <html lang="en" className={cn("h-full", "antialiased", geistMono.variable, "font-sans", geist.variable)} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         {/* Blocking inline script — runs before paint to set theme class and inject dynamic favicon */}
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* suppressHydrationWarning prevents React from warning about the script content mismatch caused by browser extensions */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} suppressHydrationWarning />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <ThemeProvider>

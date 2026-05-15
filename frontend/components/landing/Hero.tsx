@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 const Hero = () => {
@@ -67,6 +68,28 @@ const Hero = () => {
                 >
                     See how it works
                 </Link>
+            </motion.div>
+
+            {/* Launch Llama Badge */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="z-10"
+            >
+                <a
+                    href="https://launchllama.co?utm_source=badge&utm_medium=referral"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Image
+                        src="https://speaktechenglish.com/wp-content/uploads/2026/04/Screenshot_2026-04-09_at_17.40.44-removebg-preview.png"
+                        alt="Featured on Launch Llama"
+                        width={200}
+                        height={50}
+                        unoptimized
+                    />
+                </a>
             </motion.div>
 
             {/* Product Screenshot — Detailed Safari Dark Mode UI */}
